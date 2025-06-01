@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/style1.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form method="post" action="login.php">
+            <h2>Log In</h2>
+            <div class="input-field">
+                <input type="text" name="email" required>
+                <label>Enter your email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" name="password" required>
+                <label>Enter your password</label>
+                <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">👁</button>
+            </div>
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember" name="remember">
+                    <p>Remember me</p>
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit">Log In</button>
+            <div class="register">
+                <p>Don't have an account?
+                    <a href="signup.html" class="transition-link">Register</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        const links = document.querySelectorAll('.transition-link');
+        const wrapper = document.querySelector('.wrapper');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                wrapper.classList.add('fade-out');
+                setTimeout(() => {window.location.href = link.href;}, 500);
+            });
+        });
+        function togglePasswordVisibility() {
+            const passwordField = document.getElementById('password');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        }
+    </script>
+</body>
+</html>

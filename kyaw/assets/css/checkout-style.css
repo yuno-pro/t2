@@ -1,0 +1,147 @@
+/* Modern style for checkout page */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .logo {
+    height: 50px;
+}
+
+#navbar {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #00796b;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+}
+
+#checkout h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00796b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+form textarea {
+    min-height: 80px;
+}
+
+form ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0;
+}
+
+form ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+form p strong {
+    font-size: 1.2rem;
+    color: #00796b;
+}
+
+.normal {
+    background-color: #00796b;
+    color: #fff !important;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.normal:hover {
+    background-color: #004d40;
+}
+
+footer.section-p1 {
+    background-color: #00796b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .section-p1 {
+        padding: 20px 15px;
+        margin: 0 10px;
+    }
+
+    #navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
